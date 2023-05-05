@@ -11,12 +11,18 @@ public class Empleado extends Persona{
     }
    
     public String emitir(){
-        String datos= super.emitir() + "\n Sueldo basico: " + sueldo.getSueldoB();
+        String datos = super.emitir() + "Sueldo basico: " + sueldo.getSueldoB() + "\nSueldo neto: " + this.sueldo.calcularSueldoN();
         return datos;
     }
-    public double getSueldoN(){
-    
-    
+
+    public Sueldo getSueldo() {
+        return sueldo;
     }
+
+    public void setSueldo(Sueldo sueldo) {
+        this.sueldo = sueldo;
+    }
+   
+    
     
 }

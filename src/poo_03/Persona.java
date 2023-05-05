@@ -1,16 +1,35 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package poo_03;
+import java.util.Scanner;
 
-/**
- *
- * @author ET36
- */
-class Persona {
-    public String emitir(){
+public class Persona {
+    protected int edadE;
+    protected String nombreE;
     
-    return "";
+
+    public Persona(String nombreE, int edadE) {
+        this.edadE = edadE;
+        this.nombreE = nombreE;
     }
+
+    public int getEdadE() {
+        return edadE;
+    }
+
+    public void setEdadE(int edadE) {
+        this.edadE = edadE;
+    }
+
+    public String getNombreE() {
+        return nombreE;
+    }
+
+    public void setNombreE(String nombreE) {
+        this.nombreE = nombreE;
+    }
+     
+     public String emitir(){
+            return "\nNombre: " + this.getNombreE() + " \nEdad: " + this.getEdadE();
+        
+    }
+
 }

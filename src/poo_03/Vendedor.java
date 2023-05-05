@@ -5,26 +5,24 @@
 package poo_03;
 
 public class Vendedor extends Empleado{
-    private double cantVendido;
+    
     private int telefono;
+    private Cliente cliente;
    
 
-    public Vendedor(double cantVendido, String nombreE, int edadE, Sueldo sueldoB, int telefono) {
+    public Vendedor(String nombreE, int edadE, Sueldo sueldoB, int telefono) {
         super(nombreE, edadE, sueldoB);
-        this.cantVendido = cantVendido;
+        this.telefono = telefono;
     }
 
-    public double getCantVendido() {
-        return cantVendido;
-    }
-    public String emitir(){
-        return "Cantidad vendida: " + cantVendido + "Telefono: " + telefono;
-    }
-    @Override
-    public double getSueldoN(){
     
-    return 0.0;
+    public String emitir(){
+        return super.emitir() + "\nEl contacto del empleado es: " + telefono;
     }
+   
+   
+    
+    
       
     
 }
